@@ -13,7 +13,7 @@ public abstract class Pregunta {
     //comentario
     
     int peso;
-    private String text;
+    protected String text;
     
     Pregunta(int peso, String text){
         this.peso = peso;

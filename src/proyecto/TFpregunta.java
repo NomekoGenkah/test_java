@@ -20,11 +20,11 @@ public class TFpregunta extends Pregunta{
     }
     
     @Override
-    boolean buscar(String pregunta, String respuesta){
+    boolean buscar(){
         String respuestaUsuario;
         
         Scanner teclado = new Scanner(System.in);
-        System.out.println(pregunta);
+        //System.out.println(pregunta);
         System.out.println("Ingrese su respuesta: f | F | t | T :\n");
         respuestaUsuario = teclado.next();
         char letra = respuestaUsuario.charAt(0);

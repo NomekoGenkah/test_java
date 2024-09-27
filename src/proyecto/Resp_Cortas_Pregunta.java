@@ -17,7 +17,7 @@ public class Resp_Cortas_Pregunta extends Pregunta {
     }
     
     @Override
-    boolean buscar(String pregunta, String respuesta){
+    boolean buscar(){
         return true;
     }
 }

@@ -18,7 +18,7 @@ public class Selec_Mul_Pregunta extends Pregunta{
     
     
     @Override
-    boolean buscar(String pregunta, String respuesta){
+    boolean buscar(){
         return true;   
     } 
 }

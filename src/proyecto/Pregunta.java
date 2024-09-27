@@ -32,5 +32,5 @@ public abstract class Pregunta {
         return this.text;
     }
 
-    abstract boolean buscar(String pregunta, String respuesta);
+    abstract boolean buscar();
 }

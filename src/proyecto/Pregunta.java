@@ -10,6 +10,7 @@ package proyecto;
  * @author pedro
  */
 public abstract class Pregunta {
+    //comentario
     
     int peso;
     private String text;

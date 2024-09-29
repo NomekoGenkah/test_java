@@ -17,6 +17,9 @@ public class Proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
+    //    tester probar = new tester();
+    //    probar.testear();
         // TODO code application logic here
     }
     

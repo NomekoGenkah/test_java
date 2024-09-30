@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Resp_Cortas_Pregunta extends Pregunta {
     String respuesta;
     
-    Resp_Cortas_Pregunta(int peso, String pregunta, String respuesta){
+    Resp_Cortas_Pregunta(String pregunta, String respuesta, int peso){
         super(peso, pregunta);
         this.respuesta = respuesta;
     }

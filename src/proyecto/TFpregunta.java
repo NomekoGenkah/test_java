@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class TFpregunta extends Pregunta{
     boolean respuesta;
     
-    TFpregunta(int peso, String pregunta, boolean respuesta){
+    TFpregunta(String pregunta, boolean respuesta, int peso){
         super(peso, pregunta);
         this.respuesta = respuesta;   
     }

@@ -13,7 +13,7 @@ public class Selec_Mul_Pregunta extends Pregunta{
     String[] opciones;
     int index;
     
-    Selec_Mul_Pregunta(int peso, String pregunta, String[] opciones, int index){
+    Selec_Mul_Pregunta(String pregunta, String[] opciones, int index, int peso){
         super(peso, pregunta);   
         this.opciones = opciones;
         this.index = index;

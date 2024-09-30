@@ -29,11 +29,12 @@ public class TFpregunta extends Pregunta{
         do{
             System.out.println("Ingrese su respuesta: f | F | t | T :\n");
             respuestaUsuario = teclado.next();
+            //teclado.nextLine();
             caracterRespuesta = respuestaUsuario.charAt(0);
             
         }while(caracterRespuesta != 'f' && caracterRespuesta != 'F' && caracterRespuesta != 't' && caracterRespuesta != 'T');
         
-        teclado.close();
+        //teclado.close();
         
         if(caracterRespuesta == 'f' || caracterRespuesta == 'F'){
             if(!this.respuesta){

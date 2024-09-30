@@ -13,16 +13,22 @@ public class Exam {
         this.numeroPreguntas++;
     }
 
-    void darExam(){
+    int darExam(){
         int puntaje = 0;
         
         for(Pregunta pregunta: preguntas){
+            if(pregunta == null){
+                return puntaje;
+            }
+
             if(pregunta.buscar()){
-                puntaje =+ pregunta.peso;
+                puntaje = puntaje + pregunta.peso;
+                System.out.print(puntaje);
             }
         }
 
         System.out.println("puntaje obtenido = " + puntaje + "/10");
+        return puntaje;
     }
 
 }

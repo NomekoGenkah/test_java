@@ -26,7 +26,7 @@ public class Resp_Cortas_Pregunta extends Pregunta {
         System.out.println("Ingrese su respuesta: ");
 
         respuestaUsuario = teclado.nextLine();
-        teclado.close();
+       // teclado.close();
         return this.respuesta.equalsIgnoreCase(respuestaUsuario);
     }
 }

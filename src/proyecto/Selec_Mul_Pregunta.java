@@ -32,7 +32,7 @@ public class Selec_Mul_Pregunta extends Pregunta{
         }
 
         opcionUsuario = teclado.nextInt();
-        teclado.close();
+        //teclado.close();
 
         if(this.index == opcionUsuario){
             return true;

@@ -6,8 +6,8 @@ package proyecto;
  */
 
 public class tester {
-    TFpregunta pregunta = new TFpregunta(2, "hola?", true);
-
+   // TFpregunta pregunta = new TFpregunta(2, "hola?", true);
+/* 
     void testear(){
         if(pregunta.buscar()){
             System.out.println("correcto");
@@ -15,4 +15,5 @@ public class tester {
             System.out.println("mal");
         }
     }
+        */
 }

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author pedro
  */
 public class Resp_Cortas_Pregunta extends Pregunta {
-    String respuesta;
+    private String respuesta;
     
     Resp_Cortas_Pregunta(String pregunta, String respuesta, int peso){
         super(peso, pregunta);
@@ -26,7 +26,6 @@ public class Resp_Cortas_Pregunta extends Pregunta {
         System.out.println("Ingrese su respuesta: ");
 
         respuestaUsuario = teclado.nextLine();
-       // teclado.close();
         return this.respuesta.equalsIgnoreCase(respuestaUsuario);
     }
 }

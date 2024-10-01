@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author pedro
  */
 public class Selec_Mul_Pregunta extends Pregunta{
-    String[] opciones;
+    private String[] opciones;
     int index;
     
     Selec_Mul_Pregunta(String pregunta, String[] opciones, int index, int peso){
@@ -32,7 +32,6 @@ public class Selec_Mul_Pregunta extends Pregunta{
         }
 
         opcionUsuario = teclado.nextInt();
-        //teclado.close();
 
         if(this.index == opcionUsuario){
             return true;

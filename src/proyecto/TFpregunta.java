@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author pedro
  */
 public class TFpregunta extends Pregunta{
-    boolean respuesta;
+    private boolean respuesta;
     
     TFpregunta(String pregunta, boolean respuesta, int peso){
         super(peso, pregunta);
@@ -29,7 +29,6 @@ public class TFpregunta extends Pregunta{
         do{
             System.out.println("Ingrese su respuesta: f | F | t | T :\n");
             respuestaUsuario = teclado.next();
-            //teclado.nextLine();
             caracterRespuesta = respuestaUsuario.charAt(0);
             
         }while(caracterRespuesta != 'f' && caracterRespuesta != 'F' && caracterRespuesta != 't' && caracterRespuesta != 'T');

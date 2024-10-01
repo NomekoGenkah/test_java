@@ -26,8 +26,6 @@ public class Exam {
                 System.out.print(puntaje);
             }
         }
-
-        System.out.println("puntaje obtenido = " + puntaje + "/10");
         return puntaje;
     }
 

@@ -1,10 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto;
 import java.util.Scanner;
-
 /**
  *
  * @author pedro
@@ -14,26 +9,33 @@ public class Selec_Mul_Pregunta extends Pregunta{
     int index;
     
     Selec_Mul_Pregunta(String pregunta, String[] opciones, int index, int peso){
-        super(peso, pregunta);   
+        super(peso, pregunta);
         this.opciones = opciones;
         this.index = index;
     }
     
-    
     @Override
     boolean buscar(){
-        int valorLetra = 97, opcionUsuario;
+        String opcionUsuario;
+        int valorLetra = 97, intUsuario;
+        // a = 97, z = 122
+        int valorIndex = index + 97;
+        int maxIndex = 96 + this.opciones.length;
         Scanner teclado = new Scanner(System.in);
 
         System.out.println(super.text);
         for(String opcion: this.opciones){
-            System.out.println((char) valorLetra + ".)" + opcion);
+            System.out.println("\t" + (char) valorLetra + ". " + opcion);
             valorLetra++;
         }
 
-        opcionUsuario = teclado.nextInt();
+        do{
+            opcionUsuario = teclado.next();
+            intUsuario = (int) opcionUsuario.charAt(0);
 
-        if(this.index == opcionUsuario){
+        }while(intUsuario < 97 && intUsuario > maxIndex);
+
+        if(intUsuario == valorIndex){
             return true;
         }
         return false;

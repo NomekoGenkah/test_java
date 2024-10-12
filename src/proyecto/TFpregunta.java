@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto;
 import java.util.Scanner;
-
-
-
 /**
  *
  * @author pedro
@@ -27,14 +20,11 @@ public class TFpregunta extends Pregunta{
 
         System.out.println(super.text);
         do{
-            System.out.println("Ingrese su respuesta: f | F | t | T :\n");
+            System.out.println("(Ingrese T o F):");
             respuestaUsuario = teclado.next();
             caracterRespuesta = respuestaUsuario.charAt(0);
             
-        }while(caracterRespuesta != 'f' && caracterRespuesta != 'F' && caracterRespuesta != 't' && caracterRespuesta != 'T');
-        
-        //teclado.close();
-        
+        }while(caracterRespuesta != 'f' && caracterRespuesta != 'F' && caracterRespuesta != 't' && caracterRespuesta != 'T');        
         if(caracterRespuesta == 'f' || caracterRespuesta == 'F'){
             if(!this.respuesta){
                 return true;

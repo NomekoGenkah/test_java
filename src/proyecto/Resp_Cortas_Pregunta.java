@@ -1,10 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto;
 import java.util.Scanner;
-
 /**
  *
  * @author pedro
@@ -26,6 +21,11 @@ public class Resp_Cortas_Pregunta extends Pregunta {
         System.out.println("Ingrese su respuesta: ");
 
         respuestaUsuario = teclado.nextLine();
-        return this.respuesta.equalsIgnoreCase(respuestaUsuario);
+        if(this.respuesta.equalsIgnoreCase(respuestaUsuario)){
+            System.out.println("correcta!");
+            return true;
+        }
+        System.out.println("no, la respuesta correcta es " + this.respuesta);
+        return false;
     }
 }

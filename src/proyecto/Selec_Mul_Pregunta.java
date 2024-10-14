@@ -36,8 +36,10 @@ public class Selec_Mul_Pregunta extends Pregunta{
         }while(intUsuario < 97 && intUsuario > maxIndex);
 
         if(intUsuario == valorIndex){
+            System.out.println("correcta!");
             return true;
         }
+        System.out.println("no, la respuesta correcta es " + this.opciones[index]);        
         return false;
     } 
 }

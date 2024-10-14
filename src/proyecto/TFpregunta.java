@@ -27,14 +27,18 @@ public class TFpregunta extends Pregunta{
         }while(caracterRespuesta != 'f' && caracterRespuesta != 'F' && caracterRespuesta != 't' && caracterRespuesta != 'T');        
         if(caracterRespuesta == 'f' || caracterRespuesta == 'F'){
             if(!this.respuesta){
+                System.out.println("correcta!");
                 return true;
             }else{
+                System.out.println("no, la respuesta correcta es " + this.respuesta);
                 return false;
             }
         }else{
             if(!this.respuesta){
+                System.out.println("no, la respuesta correcta es " + this.respuesta);
                 return false;
             }else{
+                System.out.println("correcta!");
                 return true;
             }
         }        

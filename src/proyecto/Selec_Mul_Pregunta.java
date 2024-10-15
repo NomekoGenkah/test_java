@@ -33,7 +33,7 @@ public class Selec_Mul_Pregunta extends Pregunta{
             opcionUsuario = teclado.next();
             intUsuario = (int) opcionUsuario.charAt(0);
 
-        }while(intUsuario < 97 && intUsuario > maxIndex);
+        }while(intUsuario < 97 || intUsuario > maxIndex);
 
         if(intUsuario == valorIndex){
             System.out.println("correcta!");

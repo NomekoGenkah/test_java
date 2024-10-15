@@ -18,7 +18,7 @@ public class Resp_Cortas_Pregunta extends Pregunta {
         String respuestaUsuario;
 
         System.out.print(super.text);
-        System.out.println("Ingrese su respuesta: ");
+        System.out.println(" Ingrese su respuesta: ");
 
         respuestaUsuario = teclado.nextLine();
         if(this.respuesta.equalsIgnoreCase(respuestaUsuario)){

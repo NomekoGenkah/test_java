@@ -5,15 +5,15 @@ import java.util.Scanner;
  * @author pedro
  */
 public class TFpregunta extends Pregunta{
-    private boolean respuesta;
+    public boolean respuesta;
     
-    TFpregunta(String pregunta, boolean respuesta, int peso){
+    public TFpregunta(String pregunta, boolean respuesta, int peso){
         super(peso, pregunta);
         this.respuesta = respuesta;   
     }
     
     @Override
-    boolean buscar(){
+    public boolean buscar(){
         String respuestaUsuario = "hola";
         char caracterRespuesta = 'c';
         Scanner teclado = new Scanner(System.in);

@@ -1,32 +1,42 @@
 package proyecto;
-
+/**
+ *
+ * @author Bastiaan
+ */
 public class Exam {
+    private Pregunta[] preguntas;
+    private int contadorPreguntas;
 
-    Pregunta[] preguntas = new Pregunta[10];
-    int numeroPreguntas = 0;
-
-    void agregarPregunta(Pregunta pregunta){
-        if(this.numeroPreguntas == 9){
+    public Exam() {
+        this.preguntas= new Pregunta[10];
+        this.contadorPreguntas= 0;
+    }
+    public void agregaPregunta(Pregunta pregunta) {
+        if (contadorPreguntas < 10) {
+            preguntas[contadorPreguntas] = pregunta;
+            contadorPreguntas++;
+        } else {
+            System.out.println("no se pueden agregar mas de 10 preguntas");
+        }
+    }
+    //para controlar el examen y calcular porcentajes de preguntas correctas
+    public void darExam() {
+        if (contadorPreguntas == 0) {
+            System.out.println("no hay preguntas para responder");
             return;
         }
-        this.preguntas[this.numeroPreguntas] = pregunta;
-        this.numeroPreguntas++;
-    }
-
-    int darExam(){
-        int puntaje = 0;
-        
-        for(Pregunta pregunta: preguntas){
-            if(pregunta == null){
-                return puntaje;
-            }
-
-            if(pregunta.buscar()){
-                puntaje = puntaje + pregunta.peso;
-                System.out.print(puntaje);
+        int respuestasCorrectas= 0;
+        for (int i = 0; i < contadorPreguntas; i++) {
+            System.out.println("Pregunta " + (i + 1) + ":");
+            if (preguntas[i].buscar()) {
+                respuestasCorrectas++;
             }
         }
-        return puntaje;
+        double porcentaje= (double) respuestasCorrectas / contadorPreguntas * 100;
+        System.out.println("Respuestas correctas: " + respuestasCorrectas + " de " + contadorPreguntas);
+        System.out.printf("Porcentaje de aciertos: %.2f%%\n", porcentaje);
     }
-
+    public Pregunta[] getPreguntas() {
+        return this.preguntas;
+    }
 }

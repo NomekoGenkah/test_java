@@ -8,14 +8,14 @@ public class Selec_Mul_Pregunta extends Pregunta{
     private String[] opciones;
     int index;
     
-    Selec_Mul_Pregunta(String pregunta, String[] opciones, int index, int peso){
+    public Selec_Mul_Pregunta(String pregunta, String[] opciones, int index, int peso){
         super(peso, pregunta);
         this.opciones = opciones;
         this.index = index;
     }
     
     @Override
-    boolean buscar(){
+    public boolean buscar(){
         String opcionUsuario;
         int valorLetra = 97, intUsuario;
         // a = 97, z = 122

@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class Resp_Cortas_Pregunta extends Pregunta {
     private String respuesta;
     
-    Resp_Cortas_Pregunta(String pregunta, String respuesta, int peso){
+    public Resp_Cortas_Pregunta(String pregunta, String respuesta, int peso){
         super(peso, pregunta);
         this.respuesta = respuesta;
     }
     
     @Override
-    boolean buscar(){
+    public boolean buscar(){
         Scanner teclado = new Scanner(System.in);
         String respuestaUsuario;
 

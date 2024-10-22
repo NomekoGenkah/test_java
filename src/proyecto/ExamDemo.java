@@ -3,7 +3,6 @@ package proyecto;
 public class ExamDemo {
 
     public static void main(String args[]){
-    //    String[] opciones = {"santiago", "abril", "pcausa"};
         Exam miExam = new Exam();
 
         miExam.agregaPregunta(new TFpregunta("La capital de Chile es Santiago", true, 1));
@@ -22,8 +21,6 @@ public class ExamDemo {
         String PElec[] = {"Brasilia", "Rio de Janeiro", "Sao Paulo", "Blumenau"};
         miExam.agregaPregunta(new Selec_Mul_Pregunta("Cuál es la capital de Brasil?", PElec, 0, 1));
         int puntaje = miExam.darExam();
-        System.out.println(puntaje);
-        
-        System.out.print(puntaje);
+        System.out.println(puntaje + "%"); 
     }   
 }

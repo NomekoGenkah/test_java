@@ -20,10 +20,10 @@ public class Exam {
         }
     }
     //para controlar el examen y calcular porcentajes de preguntas correctas
-    public void darExam() {
+    public int darExam() {
         if (contadorPreguntas == 0) {
             System.out.println("no hay preguntas para responder");
-            return;
+            return 0;
         }
         int respuestasCorrectas= 0;
         for (int i = 0; i < contadorPreguntas; i++) {
@@ -32,11 +32,13 @@ public class Exam {
                 respuestasCorrectas++;
             }
         }
-        double porcentaje= (double) respuestasCorrectas / contadorPreguntas * 100;
+        double porcentaje = (double) respuestasCorrectas / contadorPreguntas * 100;
         System.out.println("Respuestas correctas: " + respuestasCorrectas + " de " + contadorPreguntas);
         System.out.printf("Porcentaje de aciertos: %.2f%%\n", porcentaje);
+        return (int) porcentaje;
     }
     public Pregunta[] getPreguntas() {
         return this.preguntas;
     }
 }
+
